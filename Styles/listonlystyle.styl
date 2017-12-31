@@ -1,0 +1,103 @@
+//out: ../listonly.css, compress:true
+
+div.post-list-item
+  display grid
+  padding 30px 0px
+  border-top 1px solid #d6d6d6
+  grid-template-columns 40% 60%
+  //Style the image holder div
+  div.imageholder
+    justify-self end
+    //Style the img -- set max width
+    &>div
+      position relative
+      overflow hidden
+      &>img
+        display block
+        position relative
+        z-index 2
+        max-width 100%
+        height auto
+      &>a
+        display block
+        position absolute
+        z-index 5
+        width 100%
+        height 100%
+        line-height 100%
+        text-align center
+        left 0px
+        bottom -100%
+        transition bottom .615s cubic-bezier(0.19, 1, 0.22, 1);
+        color white
+        background transparent
+        text-decoration none
+        //Make margin top for text
+        &>span
+          display block
+          height 40%
+      &>div.image-overlay
+        display block
+        position absolute
+        z-index 3
+        width 100%
+        height 100%
+        left 0px
+        top 0px
+        background rgba(0,0,0,0.65)
+        opacity 0
+        transition opacity .615s cubic-bezier(0.19, 1, 0.22, 1);
+
+  //On hover the image
+  div.imageholder:hover
+    &>div>a
+      bottom 0px
+    &>div>.image-overlay
+      opacity 1
+  //Style the content
+  div.contentholder
+    padding-left 15px
+    //Style the title
+    a>h1
+      margin 0px
+      text-decoration none
+      color #4c4c4c
+      transition color .1s ease
+      font-size 1.6em
+      line-height 1em
+      &:hover
+        color #3489c1
+    p{ margin-top:8px; margin-bottom:0px; color:#3e3e3e }
+
+  // ---- Style for mobile -----
+  @media screen and (max-width 630px)
+    grid-template-columns 1fr
+    div.contentholder
+      margin-top 15px
+      padding-left 0px
+    div.imageholder
+      width 100%
+      img
+        width @width
+  //For the smaller devices
+  @media screen and (max-width 500px)
+    div.contentholder h1
+      font-size 1.4em !important
+
+//Style the back-forth-buttons
+#back-forth-holder
+  border-top 1px solid #d6d6d6
+  margin auto
+  text-align center
+  padding-top 30px
+  padding-bottom 30px
+  a
+    padding 7px 10px
+    margin-left 10px
+    color white
+    background #373737
+    border-radius 2px
+
+//Disable recent posts
+aside.recent-posts.ontop
+  display none

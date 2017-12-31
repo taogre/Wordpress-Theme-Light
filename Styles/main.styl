@@ -1,0 +1,91 @@
+//out: ../styler.css, compress:true
+
+//Reset the standard crap style
+html
+body
+  margin 0px
+  padding 0px
+//Set the font and calculation mode
+*{
+  font-family 'Open Sans', sans-serif
+  box-sizing border-box
+  //On button click
+  -webkit-tap-highlight-color: rgba(1, 1, 1, 0.1);
+  //Remove the crappy outline
+  &:active{
+    outline 0
+  }
+}
+
+body
+  padding-bottom 20px
+
+
+
+//Style the black overlay
+#blackoverlay
+  display none
+  position fixed
+  width 100%
+  height 100vh
+  top 0px; left 0px
+  z-index 2
+  background rgba(0,0,0,0.15)
+  &.open
+    display block
+
+// ---- Structure the main site ------
+
+desktopWidth = 1200px
+//Make the container
+.container
+  width 100%
+  padding 0px 15px
+  @media screen and (min-width (desktopWidth + 30px))
+    width desktopWidth
+    margin auto
+  @media screen and (max-width 800px) and (min-width 630px)
+    width 600px
+    margin auto
+
+//Build up the grid
+main.container
+  display flex
+  flex-wrap wrap
+  padding-top 30px
+  justify-content space-between
+  //Place the contents
+  div#main-content
+    width 70%
+  div.aside-holder
+    width 25%
+  //Override for the BIG screens
+  @media screen and (min-width 901px)
+    aside.who-am-i
+    aside.recent-posts
+      border-bottom 1px solid #d6d6d6
+      padding-bottom 15px
+      margin-bottom 15px
+    aside.recent-posts
+      padding-top @padding-bottom
+  //Override the gird things for different sizes
+  @media screen and (max-width 900px)
+    //Add space to bottom
+    div#main-content
+      padding-bottom 30px
+    //Put the aside things to bottom
+    div.aside-holder
+    div#main-content
+      width 650px
+      margin auto
+  //Style for handys
+  @media screen and (max-width 600px)
+    //Get space between footer and who-am-i
+    footer
+      margin-top 30px
+      margin-left 0px !important
+
+
+//Import the different parts/modules
+@import navstyle
+@import asidestyles

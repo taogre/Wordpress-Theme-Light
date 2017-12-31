@@ -1,0 +1,38 @@
+navHeight = 80px
+
+navBackground = hsl(0,0%,96%)
+readProcess1 = linear-gradient(to right, #EF3734, #EF6334);
+readProcess2 = #efefef
+
+
+div#navigationbar
+  width 100%
+  background navBackground
+  height navHeight
+  //Style the Container for the logo and the navigation stuff
+  div.headercontent
+    display flex
+    height navHeight - 4px
+    //Style the logo
+    a>img
+      height 76px
+      width auto
+    //Style the button ( different file )
+    @import navbuttons
+  //Style the read proc bar
+  div#readprocess, div#readprocess>div
+    display none
+    height 4px
+    width 100%
+    background readProcess1
+  div#readprocess>div
+    background readProcess2
+    margin-left auto
+    margin-right 0px
+    transition width .1s linear
+  //Style the read process when fixed
+  div#readprocess.fixed
+    position fixed
+    top 0px
+    left 0px
+    z-index 10

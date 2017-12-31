@@ -1,0 +1,43 @@
+hamburgerBtnHeight = 36px
+
+div#closebtn
+div#burgerbtn
+  height hamburgerBtnHeight
+  width @height + 6px
+  margin-left auto
+  margin-right 0px
+  margin-top (( Hheight - hamburgerBtnHeight ) / 2)
+  border-radius 2px
+  background transparent
+  padding-right 3px
+  padding-left @padding-right
+div#closebtn
+  position absolute
+  margin-top 0px
+  right 10px
+
+//Style the burger
+div#burgerbtn>span
+  display block
+  width @width
+  height 4px
+  border-radius 3px
+  background underScoreColor
+  margin-top ((hamburgerBtnHeight - (3 * @height)) / 4)
+
+//Style the cross X
+div#closebtn>span
+  display block
+  position relative
+  width @width
+  height 4px
+  border-radius 3px
+  background underScoreColor
+  //Style the /
+  &:first-child
+    transform rotateZ(45deg)
+    margin-top 15px
+  //Style the other
+  &:last-child
+    transform rotateZ(-45deg)
+    top -3px

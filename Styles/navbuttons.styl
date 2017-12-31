@@ -1,0 +1,117 @@
+Wwidth = 800px
+Hheight = 76px
+underScore = 3px
+
+
+buttonColor = #353535
+buttonColorHov = #1c5e8a
+buttonBackground = #efefef
+underScoreColor = #287fb8
+
+
+navSideBackground = #f5f5f5
+navButtonHeight = 55px
+navBorderColor = #dedede
+navButtonHov = #efefef
+
+nav
+  margin-left auto
+  margin-right 0px
+
+//Style the hamburger and the close button
+@import navhamburger
+
+//Style for the mobile
+@media screen and (max-width Wwidth)
+  //Style the menu
+  nav
+    position fixed
+    display block
+    top 0px
+    right calc(-60% - 15px)
+    width 60%
+    height 100%
+    z-index 5
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0);
+    background navSideBackground
+    transition right .3s ease
+    //Redefine size for tablets
+    @media screen and (min-width 450px)
+      right -315px
+      width 300pxs
+    &.open
+      right 0px
+    //Style the content - begin with the close button
+    .closeholder
+      width 100%
+      height Hheight + 4px
+      padding-top (( Hheight - hamburgerBtnHeight ) / 2)
+
+  //Style the ul
+  ul#menu-topicmenu
+    margin 0px
+    padding 0px
+    list-style none
+    //Style the buttons of the bar
+    a
+      display inline-block
+      height navButtonHeight
+      width 100%
+      line-height navButtonHeight
+      text-align right
+      padding-right 10px
+      border-top 1px solid navBorderColor
+      color buttonColor
+      font-weight bold
+      text-transform uppercase
+      text-decoration none
+      &:hover
+        background navButtonHov
+    //Restyle the last button
+    li:last-child>a
+      border-bottom 1px solid navBorderColor
+
+//Style for desktop
+@media screen and (min-width Wwidth + 1px)
+  //Disable burger
+  #burgerbtn, #closebtn{ display:none }
+  //Style the buttons
+  ul#menu-topicmenu
+    margin 0px
+    padding 0px
+    list-style none
+    //Style the buttons
+    li
+      float right
+      height Hheight
+      background transparent
+      transition background .3s ease
+      a
+        display inline-block
+        height Hheight
+        line-height Hheight - underScore
+        text-decoration none
+        padding-left 15px
+        padding-right @padding-left
+        color buttonColor
+        text-transform uppercase
+        font-weight bold
+        font-size .9em
+        transition color .3s ease
+      &::before
+        content " "
+        opacity 0
+        display block
+        position relative
+        height underScore
+        width 0%
+        margin auto
+        background underScoreColor
+        transition width .3s ease, opacity .3s ease
+    li:hover
+      background buttonBackground
+      &::before
+        width 100%
+        opacity 1
+      &>a
+        color buttonColorHov
