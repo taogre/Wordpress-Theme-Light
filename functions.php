@@ -2,7 +2,7 @@
 
 //Register navigation menu
 register_nav_menus(array(
-  'primary' => "Navigation Bar Menu --> (Topics)"
+  'primary' => "Navigation Menu"
 ));
 
 //Register capability for logo

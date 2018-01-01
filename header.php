@@ -4,7 +4,7 @@
     <div id="burgerbtn"><span></span><span></span><span></span></div>
     <nav>
       <div class="closeholder"><div id="closebtn"><span></span><span></span></div></div>
-      <?php wp_nav_menu(array('menu_class'=>'navcontainer')) ?>
+      <?php wp_nav_menu(array('menu_class'=>'navcontainer', 'theme_location'=>'primary', 'menu_id'=>'menu-topicmenu')) ?>
     </nav>
   </div>
   <div id="readprocess"><div></div></div>
