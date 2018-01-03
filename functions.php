@@ -107,11 +107,11 @@ function the_list_item(){
         <?php the_post_thumbnail(); ?>
         <!-- Add the link -->
         <div class="image-overlay"></div>
-        <a href="<?php echo get_post_permalink(); ?>"><span></span>Artikel Lesen</a>
+        <a href="<?php echo get_permalink(); ?>"><span></span>Artikel Lesen</a>
       </div>
     </div>
     <div class="contentholder">
-      <a href="<?php echo get_post_permalink(); ?>" style="text-decoration:none"><h1><?php the_title(); ?></h1></a>
+      <a href="<?php echo get_permalink(); ?>" style="text-decoration:none"><h1><?php the_title(); ?></h1></a>
       <?php the_excerpt(); ?>
     </div>
   </div>
