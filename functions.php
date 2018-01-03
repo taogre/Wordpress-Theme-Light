@@ -5,6 +5,9 @@ register_nav_menus(array(
   'primary' => "Navigation Menu"
 ));
 
+//Register title tag
+add_theme_support('title-tag');
+
 //Register capability for logo
 add_theme_support('custom-logo', array(
 	'height' => 76,

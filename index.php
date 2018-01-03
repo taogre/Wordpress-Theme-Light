@@ -4,6 +4,7 @@
   <?php wp_head(); ?>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title><?php wp_title('|', true, 'right'); ?></title>
 </head>
 <body>
   <?php get_header(); ?>
