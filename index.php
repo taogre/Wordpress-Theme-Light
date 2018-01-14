@@ -40,9 +40,9 @@
           ?>
         </aside>
         <footer>
-          <a href="<?php the_terms_conditions_url(); ?>">Terms and Conditions</a>
-          <a href="/wp-admin/">Admin Login</a>
-          <span style="color:#777777; font-size:0.8em;">Powered by Marc-Andre Wessner</a>
+          <a class="direct-footer-item" href="<?php the_terms_conditions_url(); ?>">Terms and Conditions</a>
+          <a class="direct-footer-item" href="/wp-admin/">Admin Login</a>
+          <span class="direct-footer-item" style="color:#777777; font-size:0.8em;">Powered by Marc-Andre Wessner</a>
           <?php wp_footer(); ?>
         </footer>
       </div>
