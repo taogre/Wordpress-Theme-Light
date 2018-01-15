@@ -42,6 +42,8 @@ function moveElement(up,element){
 let defaultFontSize = -1;
 //Calculate width of text
 function calculateNavTextWidth(){
+  if($('nav').css("position")!="fixed")return;
+  //Calc stuff
   console.log("calculating width of text");
   //Make default font size
   if(defaultFontSize==-1)
