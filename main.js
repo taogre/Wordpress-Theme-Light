@@ -42,14 +42,14 @@ function moveElement(up,element){
 let defaultFontSize = -1;
 //Calculate width of text
 function calculateNavTextWidth(){
-  if($('nav').css("position")!="fixed")return;
+  if($('#navigationbar nav').css("position")!="fixed")return;
   //Calc stuff
   console.log("calculating width of text");
   //Make default font size
   if(defaultFontSize==-1)
     defaultFontSize = parseInt($($('ul#menu-topicmenu a').get(0)).css("font-size"));
   //Fetch the container width
-  let navWidth = $('nav').width();
+  let navWidth = $('#navigationbar nav').width();
   navWidth-=20;
   //For every element
   $('ul#menu-topicmenu a').each((index)=>{
