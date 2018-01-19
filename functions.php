@@ -87,7 +87,7 @@ function register_customizer($wp_customize){
   $wp_customize->add_section('niche_adsense', array('title'=>"Adsense", 'active_callback' => 'is_front_page'));
   //Adsense verifier
   $wp_customize->add_setting('niche_adsense_verifier', array(
-    'default' => esc_html__( 'Script Code', 'x' ),
+    'default' => "<!-- Code -->",
     'sanitize_callback' => ''
   ));
   $wp_customize->add_control('niche_adsense_verifier', array(
@@ -98,7 +98,7 @@ function register_customizer($wp_customize){
   ));
   //First adsense block
   $wp_customize->add_setting('niche_adsense_1', array(
-    'default' => esc_html__( 'Script Code', 'x' ),
+    'default' => "<!-- Code -->",
     'sanitize_callback' => ''
   ));
   $wp_customize->add_control('niche_adsense_1', array(
@@ -109,7 +109,7 @@ function register_customizer($wp_customize){
   ));
   //second adsense block
   $wp_customize->add_setting('niche_adsense_2', array(
-    'default' => esc_html__( 'Script Code', 'x' ),
+    'default' => "<!-- Code -->",
     'sanitize_callback' => ''
   ));
   $wp_customize->add_control('niche_adsense_2', array(
