@@ -25,7 +25,7 @@ function theme_styles(){
 	// Load all of the styles that need to appear on all pages
 	wp_enqueue_style('main', get_template_directory_uri().'/styler.css');
   //Load the js
-  wp_enqueue_script('jqueryCustm', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, false);
+  wp_enqueue_script('jqueryCustm', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), null, false);
   wp_enqueue_script('mainjs', get_template_directory_uri().'/main.js', array(), null, true);
   //Load conditionally
   if(is_single() || is_page()){
