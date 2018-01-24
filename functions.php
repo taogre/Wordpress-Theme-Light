@@ -161,8 +161,9 @@ function the_list_item(){
       </div>
     </div>
     <div class="contentholder">
-      <a href="<?php echo get_permalink(); ?>" style="text-decoration:none"><h1><?php the_title(); ?></h1></a>
+      <a style="text-decoration:none" href="<?php echo get_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
       <?php the_excerpt(); ?>
+      <a class="weiterlesen" href="<?php echo get_permalink(); ?>">Artikel Lesen</a>
     </div>
   </div>
 
