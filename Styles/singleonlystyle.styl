@@ -15,6 +15,12 @@ div#main-content>*:first-child
 //Doing text stuff
 div#main-content
   color hsl(0,0%,34%)
+  //Set color of time
+  time.articletime
+    color #717171
+  //Remove topspace of first item after time
+  *:nth-child(2)
+    margin-top 2px
   //Get some space
   @media screen and (min-width 630px)
     padding-left 30px
@@ -44,6 +50,8 @@ div#main-content
     text-decoration underline
   h1, h2, h3, h4, h5, h6
     color #272727
+  h1
+    font-size 1.9em
   hr
     border none
     background rgba(0,0,0,0.2)
