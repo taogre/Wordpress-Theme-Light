@@ -21,6 +21,7 @@
           if(is_single() || is_page()){ ?>
               <article>
                 <time datetime="<?php the_time("Y-m-d"); ?>" class="articletime"><?php the_date("F Y"); ?></time>
+                <?php the_auto_header(); ?>
                 <?php the_content(); ?>
               </article>
           <?php }
