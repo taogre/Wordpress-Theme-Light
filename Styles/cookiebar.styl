@@ -13,7 +13,6 @@
   p
     display inline-block
     margin 0px
-    margin-bottom 5px
   div
     display inline-block
     padding 5px 8px
@@ -23,3 +22,13 @@
     cursor pointer
   &.visible
     display block
+  //Mobile style
+  @media screen and (max-width 710px)
+    text-align left
+    p
+      margin-bottom 10px
+    div
+      text-align center
+      margin-left 0px
+      padding 10px
+      width 100%

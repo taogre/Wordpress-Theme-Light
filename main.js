@@ -110,7 +110,8 @@ function onready(){
 
 //If agree button is pressed
 function onAgreedToCookie(){
-  setCookie("agreed-to-cookies",1);
+  let expires = (new Date()).setTime((new Date()).getTime()+(120*24*60*60*1000)); ;
+  setCookie("agreed-to-cookies",1,expires);
   $("#cookiebar").removeClass("visible");
 }
 
