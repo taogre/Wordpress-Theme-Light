@@ -23,10 +23,11 @@ set_post_thumbnail_size(400,200);
 //Load the CSS and JS
 function theme_styles(){
 	// Load all of the styles that need to appear on all pages
-	wp_enqueue_style('main', get_template_directory_uri().'/styler.css');
+  wp_enqueue_style('main', get_template_directory_uri().'/styler.css');
   //Load the js
   wp_enqueue_script('jqueryCustm', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), null, false);
   wp_enqueue_script('mainjs', get_template_directory_uri().'/main.js', array(), null, true);
+  wp_enqueue_script('cookielib', get_template_directory_uri().'/cookie-lib.js', array(), null, false);
   //Load conditionally
   if(is_single() || is_page()){
     //Load stuff only for singlepages

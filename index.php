@@ -58,5 +58,9 @@
       </div>
     </div>
   </main>
+  <div id="cookiebar">
+    <p>Durch die weitere Nutzung der Webseite stimmst du der Verwendung von Cookies zu.</p>
+    <div id="button" onclick="onAgreedToCookie();">Verstanden</div>
+  </div>
 </body>
 </html>

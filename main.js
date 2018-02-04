@@ -99,6 +99,23 @@ var onresize = (event)=>{
     }
   }
 };
+
+//On ready function
+function onready(){
+  //Check for cookie
+  let cookie = getCookie("agreed-to-cookies");
+  if(cookie!=1) //Cookie not set
+    $("#cookiebar").addClass("visible");
+}
+
+//If agree button is pressed
+function onAgreedToCookie(){
+  setCookie("agreed-to-cookies",1);
+  $("#cookiebar").removeClass("visible");
+}
+
 //Make listener and call
 $(window).resize(onresize);
 onresize();
+
+$(document).ready(onready);
