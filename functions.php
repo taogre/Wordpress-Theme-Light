@@ -89,14 +89,13 @@ function the_list_item(){ ?>
       <div>
         <?php the_post_thumbnail(); ?>
         <!-- Add the link -->
-        <div class="image-overlay"></div>
-        <a href="<?php echo get_permalink(); ?>"><span></span>Artikel Lesen</a>
+        <span>Artikel Lesen</span>
+        <a href="<?php echo get_permalink(); ?>">Artikel lesen</a>
       </div>
     </div>
     <div class="contentholder">
       <a style="text-decoration:none" href="<?php echo get_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
       <?php the_excerpt(); ?>
-      <a class="weiterlesen" href="<?php echo get_permalink(); ?>">Artikel Lesen</a>
     </div>
   </div><?php
 }

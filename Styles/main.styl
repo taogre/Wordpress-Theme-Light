@@ -39,7 +39,7 @@ body
 
 // ---- Structure the main site ------
 
-desktopWidth = 1000px
+desktopWidth = 1200px
 //Make the container
 .container
   width 100%
@@ -59,13 +59,13 @@ main.container
   justify-content space-between
   //Place the contents
   div#main-content
-    width 70%
+    width 75%
   div.aside-holder
-    width 28%
+    width 25%
     &>div
       width 100%
   //Override for the BIG screens
-  @media screen and (min-width 901px)
+  @media screen and (min-width 1151px)
     div#main-content
       padding-right 50px
     aside.who-am-i
@@ -76,7 +76,7 @@ main.container
     aside.recent-posts
       padding-top @padding-bottom
   //Override the gird things for different sizes
-  @media screen and (max-width 900px)
+  @media screen and (max-width 1150px)
     //Add space to bottom
     div#main-content
       padding-bottom 30px

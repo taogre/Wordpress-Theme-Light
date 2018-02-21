@@ -1,4 +1,4 @@
-//out: ../listonly.css, compress:true
+/* //out: ../listonly.css, compress:true */
 
 div.post-list-item
   display grid
@@ -25,55 +25,50 @@ div.post-list-item
         width 100%
         height 100%
         line-height 100%
+        text-align center
+        left 0px
+        bottom -100%
+        transition bottom .615s cubic-bezier(0.19, 1, 0.22, 1);
+        color white
+        background transparent
+        text-decoration none
+        //Make margin top for text
+        &>span
+          display block
+          height 40%
+      &>div.image-overlay
+        display block
+        position absolute
+        z-index 3
+        width 100%
+        height 100%
         left 0px
         top 0px
-        transition opacity .615s cubic-bezier(0.19, 1, 0.22, 1)
-        color transparent
         background rgba(0,0,0,0.65)
         opacity 0
-      &>span
-        position absolute
-        left 0
-        bottom -100%
-        color white
-        z-index 10
-        height 100%
-        width 100%
-        text-align center
-        display block
-        padding-top 24%
-        text-transform uppercase
-        pointer-events none
-        transition bottom .615s cubic-bezier(0.19, 1, 0.22, 1)
+        transition opacity .615s cubic-bezier(0.19, 1, 0.22, 1);
 
   //On hover the image
-  div.imageholder>div:hover
-    span
+  div.imageholder:hover
+    &>div>a
       bottom 0px
-    a
+    &>div>.image-overlay
       opacity 1
-
-
   //Style the content
   div.contentholder
     padding-left 15px
     //Style the title
     a>h1
-      margin-top 0px
-      margin-bottom 12px
+      margin 0px
       text-decoration none
       color #4c4c4c
       transition color .1s ease
-      font-size 1.32em
-      line-height 1.1
+      font-size 1.4em
+      line-height 1.3
       &:hover
         color #3489c1
     //Style the paragraph
-    p
-      margin-top 8px
-      margin-bottom 0px
-      font-size 0.95em
-      color #3e3e3e
+    p{ margin-top:8px; margin-bottom:0px; color:#3e3e3e }
     //Style read more button
     a.weiterlesen
       display inline-block
@@ -83,13 +78,16 @@ div.post-list-item
   @media screen and (max-width 630px)
     grid-template-columns 1fr
     div.contentholder
+      margin-top 15px
       padding-left 0px
-      h1
-        margin-top 20px !important
     div.imageholder
       width 100%
       img
         width @width
+  //For the smaller devices
+  @media screen and (max-width 500px)
+    div.contentholder h1
+      font-size 1.4em !important
 
 //Style the back-forth-buttons
 #back-forth-holder

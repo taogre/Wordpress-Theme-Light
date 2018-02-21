@@ -80,7 +80,7 @@ var onresize = (event)=>{
   var recentPosts = $('.recent-posts');
   var divAside = $('.aside-holder>div');
   //Check if for resizes and stuff -- Desktop mode
-  if(width>900){
+  if(width>1150){
     //Reset calculated text width
     resetCalculatedNavTextWidth();
     if(divAside.hasClass('flexmode'))divAside.removeClass('flexmode');
@@ -110,7 +110,7 @@ function onready(){
 
 //If agree button is pressed
 function onAgreedToCookie(){
-  let expires = (new Date()).setTime((new Date()).getTime()+(120*24*60*60*1000)); ;
+  let expires = new Date(((new Date()).getTime())+1000*60*60*24*365);
   setCookie("agreed-to-cookies",1,expires);
   $("#cookiebar").removeClass("visible");
 }
