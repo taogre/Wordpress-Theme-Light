@@ -40,6 +40,9 @@ body
 // ---- Structure the main site ------
 
 desktopWidth = 1200px
+desktopPadding = 50px
+desktopPaddingDifference = desktopWidth - desktopPadding
+
 //Make the container
 .container
   width 100%
@@ -65,9 +68,9 @@ main.container
     &>div
       width 100%
   //Override for the BIG screens
-  @media screen and (min-width 1151px)
+  @media screen and (min-width desktopPaddingDifference+1px)
     div#main-content
-      padding-right 50px
+      padding-right desktopPadding
     aside.who-am-i
     aside.recent-posts
       border-bottom 1px solid #d6d6d6
@@ -76,7 +79,7 @@ main.container
     aside.recent-posts
       padding-top @padding-bottom
   //Override the gird things for different sizes
-  @media screen and (max-width 1150px)
+  @media screen and (max-width desktopPaddingDifference)
     //Add space to bottom
     div#main-content
       padding-bottom 30px

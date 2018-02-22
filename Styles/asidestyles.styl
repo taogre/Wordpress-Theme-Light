@@ -9,14 +9,17 @@ div.aside-holder
     display flex
     width 100%
     flex-wrap wrap
+    @media screen and (min-width 630px)
+      padding-right 30px
+      padding-left @padding-right
   //Place content -- BIG screens => row
-  @media screen and (min-width 1151px)
+  @media screen and (min-width desktopPaddingDifference+1px)
     aside.who-am-i
     aside.recent-posts
     footer
       width 100%
   //For mobile
-  @media screen and (max-width 1150px)
+  @media screen and (max-width desktopWidth - 50px)
     aside.recent-posts
       width 100%
     aside.who-am-i
@@ -81,7 +84,7 @@ aside.recent-posts>div.recent-item
       font-size 1.4em
     @media screen and (max-width 500px)
       font-size 1.1em
-    @media screen and (min-width 901px)
+    @media screen and (min-width desktopPaddingDifference + 1px)
       font-size 1em;
     a
       text-decoration none
