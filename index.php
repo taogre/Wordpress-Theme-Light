@@ -14,21 +14,23 @@
   <?php get_header(); ?>
   <main class="container">
     <div id="main-content">
-      <?php
-        //Stare the core loop
-        while(have_posts()):
-          the_post();
-          if(is_single() || is_page()){ ?>
-              <article>
-                <time datetime="<?php the_time("Y-m-d"); ?>" class="articletime"><?php the_date("F Y"); ?></time>
-                <?php the_auto_header(); ?>
-                <?php the_content(); ?>
-              </article>
-          <?php }
-          else the_list_item();
-        endwhile;
-      ?>
-      <div id="back-forth-holder"><?php if(!(is_single() || is_page())) posts_nav_link(); ?></div>
+      <div>
+        <?php
+          //Stare the core loop
+          while(have_posts()):
+            the_post();
+            if(is_single() || is_page()){ ?>
+                <article>
+                  <time datetime="<?php the_time("Y-m-d"); ?>" class="articletime"><?php the_date("F Y"); ?></time>
+                  <?php the_auto_header(); ?>
+                  <?php the_content(); ?>
+                </article>
+            <?php }
+            else the_list_item();
+          endwhile;
+        ?>
+        <div id="back-forth-holder"><?php if(!(is_single() || is_page())) posts_nav_link(); ?></div>
+      </div>
     </div>
     <div class="aside-holder">
       <div>

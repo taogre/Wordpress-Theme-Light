@@ -80,7 +80,7 @@ var onresize = (event)=>{
   var recentPosts = $('.recent-posts');
   var divAside = $('.aside-holder>div');
   //Check if for resizes and stuff -- Desktop mode
-  if(width>1150){
+  if(width>1000-35){
     //Reset calculated text width
     resetCalculatedNavTextWidth();
     if(divAside.hasClass('flexmode'))divAside.removeClass('flexmode');

@@ -12,11 +12,6 @@ red = #ce1b1b
 div#main-content>*:first-child
   margin-top 0px
 
-//Add paddingleft to image
-@media screen and (min-width 631px)
-  div#navigationbar div.headercontent
-    padding-left 40px !important
-
 //Doing text stuff
 div#main-content
   color hsl(0,0%,34%)
@@ -26,10 +21,7 @@ div#main-content
   //Remove topspace of first item after time
   *:nth-child(2)
     margin-top 2px
-  //Get some space
-  @media screen and (min-width 630px)
-    padding-left 30px
-    padding-right @padding-left
+  //Style the images
   img
     max-width 100%
     height auto
