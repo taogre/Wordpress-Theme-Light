@@ -29,7 +29,10 @@
             else the_list_item();
           endwhile;
         ?>
-        <div id="back-forth-holder"><?php if(!(is_single() || is_page())) posts_nav_link(); ?></div>
+        <!-- Print the back / forth buttons if it is a list & has second page -->
+        <?php if(!(is_single() || is_page()) && nav_buttons_neccessary()): ?>
+          <div id="back-forth-holder"><?php posts_nav_link(); ?></div>
+        <?php endif; ?>
       </div>
     </div>
     <div class="aside-holder">

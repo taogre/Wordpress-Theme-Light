@@ -1,5 +1,11 @@
 //out: ../listonly.css, compress:true
 
+//Style the special cases
+div.post-list-item:first-child
+  border-top none
+  padding-top 5px
+
+//Style the general posts
 div.post-list-item
   display grid
   padding 30px 0px
@@ -96,8 +102,7 @@ div.post-list-item
   border-top 1px solid #d6d6d6
   margin auto
   text-align center
-  padding-top 30px
-  padding-bottom 30px
+  padding-top 25px
   a
     padding 7px 10px
     margin-left 10px

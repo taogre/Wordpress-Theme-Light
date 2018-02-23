@@ -80,6 +80,12 @@ function adsense_to_post($content){
   return $content;
 }
 
+//Check if the buttons are neccessary
+function nav_buttons_neccessary(){
+  $postsPerSite = get_option('posts_per_page');
+  $postCount = (wp_count_posts())->publish;
+  return $postCount>$postsPerSite;
+}
 
 //Define list type
 function the_list_item(){ ?>
