@@ -32,7 +32,7 @@ This theme has a built in capability to use adsense (or other ad-platforms)
 
 To add the things that have to go inbetween the ```<head></head>```-tags
 
-Copy and paste it in the first text-box: _"<head></head>"_
+Copy and paste it in the first text-box: _"```<head></head>```"_
 
 2. Add the ads
 
