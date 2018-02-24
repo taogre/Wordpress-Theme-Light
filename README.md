@@ -28,6 +28,8 @@ This theme has a built in capability to use adsense (or other ad-platforms)
 
 1. To enable the capability you have to go to the Customizer again but this time select: **Adsense**
 
+![Customizer](https://github.com/MarcAndre-Wessner/niche-theme.github.io/raw/master/DOC-Images/customizer.png)
+
 To add the things that have to go inbetween the ```<head></head>```-tags
 
 Copy and paste it in the first text-box: _"<head></head>"_
@@ -41,8 +43,11 @@ The code for the ad-blocks have to go into the seond and third text-box: _"First
 To insert it into the text just add the text: ```%adsense1%``` and ```%adsense2%``` for the first and the second ad.
 
 Example:
+
 ![Editor](https://github.com/MarcAndre-Wessner/niche-theme.github.io/raw/master/DOC-Images/ad-edit.PNG)
+
 Gets to:
+
 ![Ad-Box](https://github.com/MarcAndre-Wessner/niche-theme.github.io/raw/master/DOC-Images/ad-box.PNG)
 
 
