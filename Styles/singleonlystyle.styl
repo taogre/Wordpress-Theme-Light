@@ -41,13 +41,12 @@ div#main-content
       margin-bottom 15px
   //Style the blockquotes
   blockquote
-    margin: 1.5em 0;
-    border-top 1px solid rgba(0,0,0,0.2);
-    border-bottom @border-top
-    padding 0;
-    font-size: 1.1em;
-    line-height: 1.6;
-    color #272727
+    margin 1.5em 0
+    padding 1px 15px
+    color #525252
+    background #f3f3f3
+    border-left 5px solid #6FC1D6
+    border-radius 2px
   a
     color red
     text-decoration none
@@ -63,6 +62,10 @@ div#main-content
     border none
     background rgba(0,0,0,0.2)
     height 2px
+  //Style the selection
+  *::selection
+    color white
+    background black
   //Add style to list
   ul>li, ol>li
     margin-bottom 5px

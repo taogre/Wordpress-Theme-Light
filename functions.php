@@ -106,6 +106,13 @@ function the_list_item(){ ?>
   </div><?php
 }
 
+//Add style to the editor
+function nichesite_editor_style(){
+  add_editor_style('editor-style.css');
+}
+add_action('init','nichesite_editor_style');
+
+//Require the other functions.php files
 require_once( __DIR__ . '/functions/meta-box.php');
 require_once( __DIR__ . '/functions/customizer-settings.php');
 
