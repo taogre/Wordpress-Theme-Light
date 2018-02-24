@@ -1,16 +1,22 @@
 //out: ../listonly.css, compress:true
 
-//Style the special cases
+//Create the shadow mixin
+norm-box()
+  box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  background white
+  border-radius 3px
+
+//Style the first post list item
 div.post-list-item:first-child
-  border-top none
-  padding-top 5px
+  margin-top 0px
 
 //Style the general posts
 div.post-list-item
   display grid
-  padding 30px 0px
-  border-top 1px solid #d6d6d6
   grid-template-columns 40% 60%
+  padding 15px
+  margin-top 15px
+  norm-box()
   //Style the image holder div
   div.imageholder
     justify-self end
@@ -105,11 +111,19 @@ div.post-list-item
   padding-top 25px
   a
     padding 7px 10px
-    margin-left 10px
     color white
     background #373737
     border-radius 2px
+  a:nth-child(2)
+    margin-left 10px
 
 //Disable recent posts
 aside.recent-posts.ontop
   display none
+
+//Reset norm-box of main
+div#main-content>div
+  padding 0px !important
+  background transparent !important
+  border-radius 0px !important
+  box-shadow none !important
