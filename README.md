@@ -34,7 +34,7 @@ To add the things that have to go inbetween the ```<head></head>```-tags
 
 Copy and paste it in the first text-box: _"```<head></head>```"_
 
-2. Add the ads
+#### Add the ads
 
 The code for the ad-blocks have to go into the seond and third text-box: _"First adsense block"_ and _"Second adsense block"_
 
