@@ -3,6 +3,12 @@
 //Set red color
 red = #ce1b1b
 
+//Create the shadow mixin
+norm-box()
+  box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  background white
+  border-radius 3px
+
 //Disable readprocess
 #readprocess
 #readprocess>div
@@ -11,6 +17,14 @@ red = #ce1b1b
 //Remove the space of first text thing
 div#main-content>*:first-child
   margin-top 0px
+
+//Make it as a card
+div#main-content>div
+  padding 25px
+  norm-box()
+  //Get less padding on mobile
+  @media screen and (max-width 450px)
+    padding 15px
 
 //Doing text stuff
 div#main-content
