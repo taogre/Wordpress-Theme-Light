@@ -106,6 +106,14 @@ function the_list_item(){ ?>
   </div><?php
 }
 
+//Get the time tag
+function the_time_tag(){
+  //Get the time
+  $time = get_the_modified_date("Y-m-d"); ?>
+  <!-- Format the things and print the time tag -->
+  <time datetime="<?php echo $time; ?>" class="articletime"><?php echo date("F Y",strtotime($time)); ?></time>
+<?php }
+
 //Add style to the editor
 function nichesite_editor_style(){
   add_editor_style('editor-style.css');
