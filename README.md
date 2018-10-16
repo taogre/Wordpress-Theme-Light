@@ -51,7 +51,7 @@ Gets to:
 ![Ad-Box](https://github.com/MarcAndre-Wessner/niche-theme.github.io/raw/master/DOC-Images/ad-box.PNG)
 
 
-#### What don't to do
+#### What not to do
 
 To get the best out of this theme don't do:
 
